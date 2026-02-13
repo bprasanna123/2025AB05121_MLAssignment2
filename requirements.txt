@@ -1,0 +1,9 @@
+streamlit
+pandas
+numpy
+scikit-learn
+xgboost
+matplotlib
+seaborn
+joblib
+protobuf==3.20.3
