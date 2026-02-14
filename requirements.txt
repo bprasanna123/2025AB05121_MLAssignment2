@@ -7,3 +7,24 @@ matplotlib
 seaborn
 joblib
 protobuf==3.20.3
+
+
+# # Configure identity (one-time)
+# git config --global user.name "Your Name"
+# git config --global user.email "your_email@gmail.com"
+
+# # Initialize repo
+# git init
+
+# # Add files
+# git add .
+
+# # Commit
+# git commit -m "Initial commit"
+
+# # Connect repo
+# git remote add origin REPO_LINK
+
+# # Push
+# git branch -M main
+# git push -u origin main

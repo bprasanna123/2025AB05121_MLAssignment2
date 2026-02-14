@@ -2,93 +2,95 @@
 
 ## Problem Statement
 
-Customer churn prediction is an important business problem where organizations aim to identify customers likely to leave their services. This project focuses on predicting bank customer churn using multiple machine learning classification models and deploying the solution through an interactive Streamlit web application.
+Customer churn prediction is an important business problem where organizations aim to identify customers who are likely to leave their services. This project focuses on predicting bank customer churn using multiple machine learning classification models and deploying the solution through an interactive Streamlit web application.
 
 ---
 
 ## Dataset Description
 
-The dataset used is the **Bank Customer Churn Prediction Dataset** obtained from Kaggle.
-It contains approximately 10,000 customer records with multiple demographic and financial features.
+The dataset used is the **Bank Customer Churn Prediction Dataset** obtained from Kaggle.  
+It contains approximately **10,000 customer records** with demographic, financial, and behavioral attributes.
 
-**Target Variable:**
+### Target Variable
+- **Exited** → Indicates whether the customer left the bank (1) or stayed (0).
 
-* `Exited` → Indicates whether the customer left the bank (1) or stayed (0).
+### Key Features
+- Credit score, age, tenure, account balance, estimated salary  
+- Geography and gender information  
+- Banking activity indicators  
 
-**Key Features Include:**
-
-* Credit score, age, balance, tenure, salary
-* Geography and gender information
-* Account activity indicators
-
-The dataset satisfies assignment requirements with more than 500 instances and over 12 features.
+The dataset satisfies assignment requirements with more than **500 instances and over 12 features**.
 
 ---
 
 ## Data Preprocessing
 
-The dataset underwent preprocessing including:
-- Removal of irrelevant identifier columns
-- Encoding categorical variables
+The dataset undergoes preprocessing including:
+
+- Removal of irrelevant identifier columns (`RowNumber`, `CustomerId`, `Surname`)
+- Encoding categorical variables using one-hot encoding
 - Feature scaling using StandardScaler
 - Train-test split for unbiased evaluation
 
 ---
 
-## Machine Learning Models Implemented
+## Machine Learning Models Used
 
-The following classification models were trained and evaluated on the same dataset:
+The following classification models are trained and evaluated:
 
-* Logistic Regression
-* Decision Tree Classifier
-* K-Nearest Neighbors (KNN)
-* Naive Bayes (Gaussian)
-* Random Forest (Ensemble)
-* XGBoost (Ensemble)
+- Logistic Regression  
+- Decision Tree  
+- K-Nearest Neighbors (KNN)  
+- Naive Bayes  
+- Random Forest (Ensemble)  
+- XGBoost (Ensemble)
 
 ---
 
-## Model Evaluation Metrics
+## Model Comparison Table (Evaluation Metrics)
 
-| Model               | Accuracy | AUC    | Precision | Recall | F1 Score | MCC    |
-| ------------------- | -------- | ------ | --------- | ------ | -------- | ------ |
-| Logistic Regression | 0.8080   | 0.7748 | 0.5891    | 0.1867 | 0.2836   | 0.2515 |
-| Decision Tree       | 0.7825   | 0.6815 | 0.4685    | 0.5111 | 0.4888   | 0.3516 |
-| KNN                 | 0.8240   | 0.7531 | 0.6222    | 0.3440 | 0.4430   | 0.3703 |
-| Naive Bayes         | 0.8200   | 0.7843 | 0.6000    | 0.3464 | 0.4393   | 0.3594 |
-| Random Forest       | 0.8640   | 0.8522 | 0.7824    | 0.4595 | 0.5789   | 0.5297 |
-| XGBoost             | 0.8490   | 0.8328 | 0.6829    | 0.4816 | 0.5648   | 0.4874 |
+| ML Model Name | Accuracy | AUC | Precision | Recall | F1 | MCC |
+|--------------|----------|------|----------|--------|------|------|
+| Logistic Regression | 0.8080 | 0.7748 | 0.5891 | 0.1867 | 0.2836 | 0.2515 |
+| Decision Tree | 0.7825 | 0.6815 | 0.4685 | 0.5111 | 0.4888 | 0.3516 |
+| KNN | 0.8240 | 0.7531 | 0.6222 | 0.3440 | 0.4430 | 0.3703 |
+| Naive Bayes | 0.8200 | 0.7843 | 0.6000 | 0.3464 | 0.4393 | 0.3594 |
+| Random Forest (Ensemble) | 0.8640 | 0.8522 | 0.7824 | 0.4595 | 0.5789 | 0.5297 |
+| XGBoost (Ensemble) | 0.8490 | 0.8328 | 0.6829 | 0.4816 | 0.5648 | 0.4874 |
 
 ---
 
 ## Observations on Model Performance
 
-* **Random Forest** achieved the best overall performance with highest accuracy, AUC, F1 score, and MCC, indicating strong generalization capability.
-* **XGBoost** also performed well and showed balanced predictive performance.
-* **Logistic Regression** provided decent accuracy but very low recall, suggesting difficulty in identifying churn customers.
-* **Decision Tree** showed moderate performance but likely overfitting compared to ensemble models.
-* **KNN and Naive Bayes** offered stable baseline performance but were less effective than ensemble approaches.
-* Dataset class imbalance impacts recall, making ensemble models more suitable for this task.
+| ML Model Name | Observation about Model Performance |
+|--------------|------------------------------------|
+| Logistic Regression | Shows reasonable accuracy but very low recall, indicating difficulty detecting churn customers. |
+| Decision Tree | Provides moderate performance but may overfit compared to ensemble models. |
+| KNN | Offers stable baseline performance but less effective than ensemble approaches. |
+| Naive Bayes | Balanced probabilistic model but comparatively lower predictive power. |
+| Random Forest (Ensemble) | Achieves the best overall performance with highest accuracy, AUC, F1 score, and MCC, indicating strong generalization capability. |
+| XGBoost (Ensemble) | Performs strongly with competitive accuracy and recall, slightly below Random Forest. |
 
 ---
 
 ## Streamlit Web Application
 
-An interactive Streamlit application was developed to demonstrate model predictions.
-Key features include:
+An interactive Streamlit application demonstrates model predictions with the following features:
 
-* CSV dataset upload option
-* Model selection dropdown
-* Display of evaluation metrics
-* Confusion matrix / classification report
+- CSV dataset upload option  
+- Model selection dropdown  
+- Display of evaluation metrics  
+- Confusion matrix and classification report visualization  
 
-Deployment Link: *(Add Streamlit link here)*
+### Deployment Link
+https://bank-churn-ml-assignment-ffaltdqlezdcpzxvelbmks.streamlit.app/
 
 ---
 
 ## GitHub Repository
 
-Repository Link: *(Add GitHub repo link here)*
+Repository Link:  
+https://github.com/sthippa/bank-churn-ml-assignment
 
 ---
 
@@ -114,26 +116,26 @@ project-folder/
 
 ```
 
+
 ---
 
 ## Technologies Used
 
-* Python
-* Pandas, NumPy
-* Scikit-learn
-* XGBoost
-* Streamlit
-* Matplotlib & Seaborn
+- Python  
+- Pandas, NumPy  
+- Scikit-learn  
+- XGBoost  
+- Streamlit  
+- Matplotlib & Seaborn  
 
 ---
 
 ## Assignment Execution Environment
 
-This assignment was executed on the BITS Virtual Lab environment
-as per assignment requirements.
+This assignment is executed on the **BITS Virtual Lab environment** as required.
 
 ---
 
 ## Conclusion
 
-This project demonstrates a complete machine learning pipeline including data preprocessing, model training, evaluation, deployment, and interactive visualization using Streamlit.
+This project demonstrates a complete machine learning pipeline including data preprocessing, model training, evaluation, deployment, and interactive visualization using Streamlit for customer churn prediction.
