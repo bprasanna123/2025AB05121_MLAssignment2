@@ -83,14 +83,14 @@ An interactive Streamlit application demonstrates model predictions with the fol
 - Confusion matrix and classification report visualization  
 
 ### Deployment Link
-https://bank-churn-ml-assignment-ffaltdqlezdcpzxvelbmks.streamlit.app/
+https://2025ab05121mlassignment2-fxfvo9uc8iojmxwtck2m5t.streamlit.app
 
 ---
 
 ## GitHub Repository
 
 Repository Link:  
-https://github.com/sthippa/bank-churn-ml-assignment
+https://github.com/bprasanna123/2025AB05121_MLAssignment2
 
 ---
 
